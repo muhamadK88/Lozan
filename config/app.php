@@ -56,6 +56,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Public and Admin Hosts
+    |--------------------------------------------------------------------------
+    |
+    | The public site and the admin panel are served from separate hosts.
+    | Routes are registered against these values, so an admin URL cannot be
+    | reached from the public domain (and vice versa).
+    |
+    */
+
+    'public_domain' => env('PUBLIC_DOMAIN', 'lozan.com'),
+
+    'admin_domain' => env('ADMIN_DOMAIN', 'admin.lozan.com'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |
@@ -65,7 +80,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'Asia/Baghdad'),
 
     /*
     |--------------------------------------------------------------------------
